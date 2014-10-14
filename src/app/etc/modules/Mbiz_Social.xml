@@ -14,7 +14,8 @@
     <modules>
         <Mbiz_Social>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Mbiz_Social>
     </modules>
 </config>
+
