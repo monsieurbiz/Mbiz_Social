@@ -1,0 +1,7 @@
+# Sources
+src/app/code/community/Mbiz/Social app/code/community/Mbiz/Social
+src/app/etc/modules/Mbiz_Social.xml app/etc/modules/Mbiz_Social.xml
+
+# Locales
+src/app/locale/en_US/Mbiz_Social.csv app/locale/en_US/Mbiz_Social.csv
+src/app/locale/fr_FR/Mbiz_Social.csv app/locale/fr_FR/Mbiz_Social.csv
