@@ -22,56 +22,74 @@ class Mbiz_Social_Helper_Data extends Mage_Core_Helper_Abstract
 
     /**
      * Retrieve the twitter URL
-     * @return string
+     * @return string|null NULL if no twitter identifier set
      */
     public function getTwitterPageUrl()
     {
-        return sprintf('https://twitter.com/%s', Mage::getSingleton('mbiz_social/config')->getTwitterIdentifier());
+        if (!$id = Mage::getSingleton('mbiz_social/config')->getTwitterIdentifier()) {
+            return null;
+        }
+        return sprintf('https://twitter.com/%s', $id);
     }
 
     /**
      * Retrieve the facebook URL
-     * @return string
+     * @return string|null NULL if no facebook identifier set
      */
     public function getFacebookPageUrl()
     {
-        return sprintf('https://facebook.com/%s', Mage::getSingleton('mbiz_social/config')->getFacebookIdentifier());
+        if (!$id = Mage::getSingleton('mbiz_social/config')->getFacebookIdentifier()) {
+            return null;
+        }
+        return sprintf('https://facebook.com/%s', $id);
     }
 
     /**
      * Retrieve the google plus URL
-     * @return string
+     * @return string|null NULL if no google plus identifier set
      */
     public function getGplusPageUrl()
     {
-        return sprintf('https://plus.google.com/+%s', Mage::getSingleton('mbiz_social/config')->getGplusIdentifier());
+        if (!$id = Mage::getSingleton('mbiz_social/config')->getGplusIdentifier()) {
+            return null;
+        }
+        return sprintf('https://plus.google.com/+%s', $id);
     }
 
     /**
      * Retrieve the Linkedin URL
-     * @return string
+     * @return string|null NULL if no linkedin identifier set
      */
     public function getLinkedinPageUrl()
     {
-        return sprintf('https://www.linkedin.com/profile/view?id=%s', Mage::getSingleton('mbiz_social/config')->getLinkedinIdentifier());
+        if (!$id = Mage::getSingleton('mbiz_social/config')->getLinkedinIdentifier()) {
+            return null;
+        }
+        return sprintf('https://www.linkedin.com/profile/view?id=%s', $id);
     }
 
     /**
      * Retrieve the Pinterest URL
-     * @return string
+     * @return string|null NULL if no pinterest identifier set
      */
     public function getPinterestPageUrl()
     {
-        return sprintf('http://www.pinterest.com/%s/', Mage::getSingleton('mbiz_social/config')->getPinterestIdentifier());
+        if (!$id = Mage::getSingleton('mbiz_social/config')->getPinterestIdentifier()) {
+            return null;
+        }
+        return sprintf('http://www.pinterest.com/%s/', $id);
     }
 
     /**
      * Retrieve the Instagram URL
-     * @return string
+     * @return string|null NULL if no instagram identifier set
      */
     public function getInstagramPageUrl()
     {
-        return sprintf('http://instagram.com/%s', Mage::getSingleton('mbiz_social/config')->getInstagramIdentifier());
+        if (!$id = Mage::getSingleton('mbiz_social/config')->getInstagramIdentifier()) {
+            return null;
+        }
+        return sprintf('http://instagram.com/%s', $id);
     }
 
 // Monsieur Biz Tag NEW_METHOD
