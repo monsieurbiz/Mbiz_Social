@@ -17,32 +17,27 @@ class Mbiz_Social_Model_Config extends Mage_Core_Model_Abstract
 {
 
     /**
-     * Twitter identifier config path
-     * @const CONFIG_PATH_TWITTER_IDENTIFIER string
+     * Identifier config path
+     * @const CONFIG_PATH_IDENTIFIER string
      */
-    const CONFIG_PATH_TWITTER_IDENTIFIER = 'web/mbiz_social/twitter_identifier';
-
-    /**
-     * Facebook identifier config path
-     * @const CONFIG_PATH_FACEBOOK_IDENTIFIER string
-     */
-    const CONFIG_PATH_FACEBOOK_IDENTIFIER = 'web/mbiz_social/facebook_identifier';
-
-    /**
-     * Google Plus identifier config path
-     * @const CONFIG_PATH_GPLUS_IDENTIFIER string
-     */
-    const CONFIG_PATH_GPLUS_IDENTIFIER = 'web/mbiz_social/gplus_identifier';
-
-    /**
-     * LinkedIn identifier config path
-     * @const CONFIG_PATH_LINKEDIN_IDENTIFIER string
-     */
-    const CONFIG_PATH_LINKEDIN_IDENTIFIER = 'web/mbiz_social/linkedin_identifier';
+    const CONFIG_PATH_IDENTIFIER = 'web/mbiz_social/%s_identifier';
 
 // Monsieur Biz Tag NEW_CONST
 
 // Monsieur Biz Tag NEW_VAR
+
+    /**
+     * Retrieve an identifier
+     * @param string $network (twitter, facebook, gplus, pinterest…)
+     * @return string
+     */
+    protected function _getIdentifier($network)
+    {
+        return Mage::getStoreConfig(sprintf(
+            self::CONFIG_PATH_IDENTIFIER,
+            $network
+        ));
+    }
 
     /**
      * Retrieve the twitter identifier
@@ -50,7 +45,7 @@ class Mbiz_Social_Model_Config extends Mage_Core_Model_Abstract
      */
     public function getTwitterIdentifier()
     {
-        return Mage::getStoreConfig(self::CONFIG_PATH_TWITTER_IDENTIFIER);
+        return $this->_getIdentifier('twitter');
     }
 
     /**
@@ -59,7 +54,7 @@ class Mbiz_Social_Model_Config extends Mage_Core_Model_Abstract
      */
     public function getFacebookIdentifier()
     {
-        return Mage::getStoreConfig(self::CONFIG_PATH_FACEBOOK_IDENTIFIER);
+        return $this->_getIdentifier('facebook');
     }
 
     /**
@@ -68,7 +63,7 @@ class Mbiz_Social_Model_Config extends Mage_Core_Model_Abstract
      */
     public function getLinkedinIdentifier()
     {
-        return Mage::getStoreConfig(self::CONFIG_PATH_LINKEDIN_IDENTIFIER);
+        return $this->_getIdentifier('linkedin');
     }
 
     /**
@@ -77,7 +72,25 @@ class Mbiz_Social_Model_Config extends Mage_Core_Model_Abstract
      */
     public function getGplusIdentifier()
     {
-        return Mage::getStoreConfig(self::CONFIG_PATH_GPLUS_IDENTIFIER);
+        return $this->_getIdentifier('gplus');
+    }
+
+    /**
+     * Retrieve the Pinterest identifier
+     * @return string
+     */
+    public function getGplusIdentifier()
+    {
+        return $this->_getIdentifier('pinterest');
+    }
+
+    /**
+     * Retrieve the Instagram identifier
+     * @return string
+     */
+    public function getInstagramIdentifier()
+    {
+        return $this->_getIdentifier('instagram');
     }
 
 // Monsieur Biz Tag NEW_METHOD

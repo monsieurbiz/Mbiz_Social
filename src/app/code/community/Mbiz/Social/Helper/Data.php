@@ -21,7 +21,7 @@ class Mbiz_Social_Helper_Data extends Mage_Core_Helper_Abstract
 // Monsieur Biz Tag NEW_VAR
 
     /**
-     * Retrieve the twitter url
+     * Retrieve the twitter URL
      * @return string
      */
     public function getTwitterPageUrl()
@@ -30,7 +30,7 @@ class Mbiz_Social_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-     * Retrieve the facebook url
+     * Retrieve the facebook URL
      * @return string
      */
     public function getFacebookPageUrl()
@@ -39,7 +39,7 @@ class Mbiz_Social_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-     * Retrieve the google plus url
+     * Retrieve the google plus URL
      * @return string
      */
     public function getGplusPageUrl()
@@ -48,12 +48,30 @@ class Mbiz_Social_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-     * short_description_here
+     * Retrieve the Linkedin URL
      * @return string
      */
     public function getLinkedinPageUrl()
     {
         return sprintf('https://www.linkedin.com/profile/view?id=%s', Mage::getSingleton('mbiz_social/config')->getLinkedinIdentifier());
+    }
+
+    /**
+     * Retrieve the Pinterest URL
+     * @return string
+     */
+    public function getPinterestPageUrl()
+    {
+        return sprintf('http://www.pinterest.com/%s/', Mage::getSingleton('mbiz_social/config')->getPinterestIdentifier());
+    }
+
+    /**
+     * Retrieve the Instagram URL
+     * @return string
+     */
+    public function getInstagramPageUrl()
+    {
+        return sprintf('http://instagram.com/%s', Mage::getSingleton('mbiz_social/config')->getInstagramIdentifier());
     }
 
 // Monsieur Biz Tag NEW_METHOD
