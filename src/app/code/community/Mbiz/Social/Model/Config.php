@@ -79,7 +79,7 @@ class Mbiz_Social_Model_Config extends Mage_Core_Model_Abstract
      * Retrieve the Pinterest identifier
      * @return string
      */
-    public function getGplusIdentifier()
+    public function getPinterestIdentifier()
     {
         return $this->_getIdentifier('pinterest');
     }
