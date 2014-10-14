@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * This file is part of Mbiz_Social for Magento.
+ *
+ * @license All rights reserved
+ * @author Jacques Bodin-Hullin <@jacquesbh> <j.bodinhullin@monsieurbiz.com>
+ * @category Mbiz
+ * @package Mbiz_Social
+ * @copyright Copyright (c) 2014 Monsieur Biz (http://monsieurbiz.com/)
+ */
+-->
+<config>
+    <sections>
+        <web>
+            <groups>
+                <mbiz_social translate="label" module="mbiz_social">
+                    <label>Social</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <twitter_identifier translate="label" module="mbiz_social">
+                            <label>Twitter identifier</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </twitter_identifier>
+                        <facebook_identifier translate="label" module="mbiz_social">
+                            <label>Facebook identifier</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </facebook_identifier>
+                        <gplus_identifier translate="label" module="mbiz_social">
+                            <label>Google Plus identifier</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </gplus_identifier>
+                        <linkedin_identifier translate="label" module="mbiz_social">
+                            <label>LinkedIn identifier</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </linkedin_identifier>
+                    </fields>
+                </mbiz_social>
+            </groups>
+        </web>
+    </sections>
+</config>
